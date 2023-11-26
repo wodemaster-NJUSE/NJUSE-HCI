@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+
+% 导言区
+\usepackage{titlesec}
+\usepackage{lipsum} % 示例用，可以删除
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath} % 用于数学公式
+\usepackage{graphicx} % 用于插入图片
+\usepackage{float}
+\usepackage{lipsum} % 用于生成虚拟文本
+\usepackage{ctex} % 导入 ctex 包以支持中文
+\usepackage{xeCJK}
+\usepackage{titlesec} % 导入 titlesec 包以定制标题样式
+\usepackage{fontspec} % 用于设置中文字体
+\usepackage{amsfonts}
+\usepackage{amsmath} % 提供 \text 和 \tanh 命令
+\usepackage{bm}      % 提供 \bm 命令用于粗体
+
+% 目录设置
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{enumitem}
+% 页面设置
+\geometry{margin=1in}
+
+% 标题设置
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% 行间距设置
+\onehalfspacing
+
+% 文档信息
+\title{启发式评估报告}
+\author{人机不寄小分队}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+
+% 添加目录
+    \tableofcontents
+
+    \section{团队成员}
+    211250124 程智镝
+
+    211250122 刘辉
+
+    211250159 陈凌
+
+    211250158 李忠信
+    \section{执行概要}
+
+    \section{介绍}
+    \subsection{产品信息}
+    \subsubsection{产品}
+    \subsubsection{目标人群}
+
+    \section{启发式评估技术}
+    \subsection{方法}
+    \subsection{具体项目目标}
+    \subsection*{使用的启示法}
+    \subsection*{问题的优先级}
+    
+    \section*{调查结果总结}
+
+    \section*{具体问题域}
+\end{document}
