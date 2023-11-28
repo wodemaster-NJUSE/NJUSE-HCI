@@ -10,15 +10,27 @@ import java.util.NoSuchElementException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+
+/**
+ * Exception Controller
+ */
+
 @Slf4j
 @RestControllerAdvice
 public class BusinessExceptionHandler {
+
+    /**
+     * 登录授权异常
+     */
     @ExceptionHandler(NotLoginException.class)
     public CommonResponse<?> handleAuthorizeException(NotLoginException e) {
         log.error("Not Login Exception", e);
         return CommonResponse.error(CommonErrorType.UNAUTHORIZED, e.getMessage());
     }
-    
+
+    /**
+     * 无元素异常
+     */
     @ExceptionHandler(NoSuchElementException.class)
     public CommonResponse<?> handleNoSuchElementException(NoSuchElementException e) {
         log.error("No Such Element Exception", e);

@@ -15,7 +15,6 @@ const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive({
   username: '',
   password: '',
-
 })
 
 const rules = reactive<FormRules>({

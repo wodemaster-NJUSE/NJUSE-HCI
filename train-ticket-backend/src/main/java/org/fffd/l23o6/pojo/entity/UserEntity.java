@@ -38,6 +38,10 @@ public class UserEntity {
     private String type;
     private String idn;
 
+    // 里程积分按照原子车票的思路来实现，每个原子车票按1000分来算
+    private Integer MileagePoints;
+
+
     @CreationTimestamp
     private Date createdAt;
 

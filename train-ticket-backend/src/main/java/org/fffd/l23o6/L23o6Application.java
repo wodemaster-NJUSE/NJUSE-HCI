@@ -14,7 +14,6 @@ import io.swagger.v3.oas.models.info.Info;
 
 @SpringBootApplication
 public class L23o6Application {
-
     public static void main(String[] args) {
         SpringApplication.run(L23o6Application.class, args);
     }

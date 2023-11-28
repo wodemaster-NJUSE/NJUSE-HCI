@@ -77,7 +77,6 @@ const submitOrderForm = (formEl: FormInstance | undefined) => {
       }
     })
 
-
     r.then((response: AxiosResponse<any>) => {
       console.log(response)
       router.push(`/order/${response.data.data.id}`)
@@ -164,7 +163,7 @@ const submitOrderForm = (formEl: FormInstance | undefined) => {
     <el-form-item label="坐席" prop="seat_type">
       <el-select v-model="orderForm.seat_type">
         <el-option v-for="ticket in props.ticket_info" :value="ticket.type" :label="`${ticket.type}  ${ticket.price}元`"
-          :disabled="ticket.count == 0" />
+                   :disabled="ticket.count == 0" />
       </el-select>
     </el-form-item>
     <el-form-item>

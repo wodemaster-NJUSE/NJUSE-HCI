@@ -49,7 +49,6 @@ const logout = () => {
     <el-menu-item index="/station">车站管理</el-menu-item>
     <el-menu-item index="/route">路线管理</el-menu-item>
     <el-menu-item index="/train">车次管理</el-menu-item>
-    <el-menu-item index="/order">订单</el-menu-item>
     <el-menu-item h="full" @click="toggleDark()">
       <button class="border-none w-full bg-transparent cursor-pointer" style="height: var(--el-menu-item-height)">
         <i inline-flex i="dark:ep-moon ep-sunny" />

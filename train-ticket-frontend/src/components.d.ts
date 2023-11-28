@@ -46,6 +46,7 @@ declare module '@vue/runtime-core' {
     MenuComponent: typeof import('./components/MenuComponent.vue')['default']
     OrderDetail: typeof import('./components/OrderDetail.vue')['default']
     OrderForm: typeof import('./components/OrderForm.vue')['default']
+    PaymentDetail: typeof import('./components/PaymentDetail.vue')['default']
     RegisterForm: typeof import('./components/RegisterForm.vue')['default']
     RouteDetailForm: typeof import('./components/RouteDetailForm.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

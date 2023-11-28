@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.fffd.l23o6.pojo.enum_.TrainType;
 
 @Data
 @Schema(description = "添加车次请求")
@@ -23,9 +24,9 @@ public class AddTrainRequest {
     private Long routeId;
 
     @Schema(description = "车类型", required = true)
-    @Pattern(regexp = "^(高铁|普通列车)$", message = "车类型目前只能为高铁或普通列车")
+//    @Pattern(regexp = "^(高铁|普通列车)$", message = "车类型目前只能为高铁或普通列车")
     @NotNull
-    private String trainType;
+    private TrainType trainType;
 
     @Schema(description = "车次日期,YYYY-MM-DD", required = true)
     @NotNull

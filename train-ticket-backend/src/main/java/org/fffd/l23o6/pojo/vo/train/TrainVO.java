@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class TrainVO {
     private Long id;
     private String name;
+    private String trainType;
     private Long startStationId;
     private Long endStationId;
     private Date departureTime;

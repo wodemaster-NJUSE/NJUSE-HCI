@@ -13,6 +13,7 @@ import lombok.Data;
 public class TrainDetailVO {
     private Long id;
     private String name;
+    private String trainType;
     private List<Long> stationIds;
     private String date;
     private List<Date> departureTimes;

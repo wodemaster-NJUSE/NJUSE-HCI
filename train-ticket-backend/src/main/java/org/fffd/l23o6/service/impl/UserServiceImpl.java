@@ -15,6 +15,15 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
 
+    /**
+     * 用户注册
+     * @param username 用户名
+     * @param password 密码
+     * @param name     名字
+     * @param idn      idn
+     * @param phone    电话
+     * @param type     用户类型
+     */
     @Override
     public void register(String username, String password, String name, String idn, String phone, String type) {
         UserEntity user = userDao.findByUsername(username);
@@ -24,14 +33,24 @@ public class UserServiceImpl implements UserService {
         }
 
         userDao.save(UserEntity.builder().username(username).password(BCrypt.hashpw(password))
-                .name(name).idn(idn).phone(phone).type(type).build());
+                .name(name).idn(idn).phone(phone).type(type).MileagePoints(0).build());
     }
 
+    /**
+     * 根据 username 查找用户
+     * @param username 用户名
+     * @return         用户实体
+     */
     @Override
     public UserEntity findByUserName(String username) {
         return userDao.findByUsername(username);
     }
 
+    /**
+     * 用户登录
+     * @param username 用户名
+     * @param password 密码
+     */
     @Override
     public void login(String username, String password) {
         UserEntity user = userDao.findByUsername(username);
@@ -40,6 +59,14 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * 编辑用户信息
+     * @param username 用户名
+     * @param name     名字
+     * @param idn      idn
+     * @param phone    电话号码
+     * @param type     用户类型
+     */
     @Override
     public void editInfo(String username, String name, String idn, String phone, String type){
         UserEntity user = userDao.findByUsername(username);

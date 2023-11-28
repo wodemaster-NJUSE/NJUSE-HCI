@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-import org.fffd.l23o6.enum_.order.OrderStatus;
+import org.fffd.l23o6.pojo.enum_.OrderStatus;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import java.util.Date;
@@ -24,13 +24,13 @@ public class OrderEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id;//确定唯一订单
 
     @NotNull
-    private Long userId;
+    private Long userId;//找到对应用户
 
     @NotNull
-    private Long trainId;
+    private Long trainId;//标志对应动车
 
     @NotNull
     private Long departureStationId;

@@ -11,6 +11,7 @@ import lombok.Data;
 public class AdminTrainVO {
     private Long id;
     private String name;
+    private String trainType;
     private Long routeId;
     private String date;
     private List<Date> departureTimes;

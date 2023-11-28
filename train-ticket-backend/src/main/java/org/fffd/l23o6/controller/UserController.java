@@ -44,6 +44,7 @@ public class UserController {
     @GetMapping("user")
     public CommonResponse<UserVO> userInfo() {
         StpUtil.checkLogin();
+        assert UserMapper.INSTANCE.toUserVO(userService.findByUserName(String.valueOf(StpUtil.getLoginId()))).getMileagePoints() != null;
         return CommonResponse.success(UserMapper.INSTANCE.toUserVO(userService.findByUserName(String.valueOf(StpUtil.getLoginId()))));
     }
 

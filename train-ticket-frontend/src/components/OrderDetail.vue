@@ -75,6 +75,7 @@ const getTrain = () => {
 
 
 const pay = (id: number) => {
+  window.open(`http://localhost:8080/alipay/pay?subject=TICKET&traceNo=${id.toString()}&totalAmount=0`) // ${}
   request({
     url: `/order/${id}`,
     method: 'PATCH',
@@ -86,7 +87,7 @@ const pay = (id: number) => {
       offset: 70,
       title: '支付成功',
       message: h('success', { style: 'color: teal' }, res.data.msg),
-    })
+    })``
     getOrderDetail()
     console.log(res)
   }).catch((error) => {
@@ -161,6 +162,7 @@ getOrderDetail()
           {{ props.id }}
         </el-text>
       </div>
+
       <div>
         <el-text size="large" tag="b" type="primary">
           创建日期:&nbsp;&nbsp;

@@ -9,4 +9,6 @@ public class UserVO {
     private String phone;
     private String idn;
     private String type;
+    private Integer MileagePoints;
+    // done todo: 在后端添加了属性, 但未更新 VO : private Integer MileagePoints;p
 }
