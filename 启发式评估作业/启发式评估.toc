@@ -4,10 +4,9 @@
 \contentsline {section}{\numberline {3}评估对象}{2}{}%
 \contentsline {section}{\numberline {4}评估方法}{2}{}%
 \contentsline {subsection}{\numberline {4.1}评估流程}{2}{}%
-\contentsline {subsection}{\numberline {4.2}启发式评估标准}{2}{}%
-\contentsline {subsection}{\numberline {4.3}严重性等级的标准}{2}{}%
-\contentsline {subsection}{\numberline {4.4}修复等级的标准}{2}{}%
-\contentsline {section}{\numberline {5}评估环境}{2}{}%
-\contentsline {section}{\numberline {6}评估结果}{2}{}%
-\contentsline {subsection}{\numberline {6.1}可用性问题}{2}{}%
-\contentsline {subsection}{\numberline {6.2}成功实例}{2}{}%
+\contentsline {subsection}{\numberline {4.2}启发式评估标准}{3}{}%
+\contentsline {subsection}{\numberline {4.3}严重性等级的标准}{4}{}%
+\contentsline {subsection}{\numberline {4.4}修复等级的标准}{4}{}%
+\contentsline {section}{\numberline {5}评估环境}{4}{}%
+\contentsline {section}{\numberline {6}评估结果}{5}{}%
+\contentsline {subsection}{\numberline {6.1}可用性问题}{5}{}%

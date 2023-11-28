@@ -8,18 +8,15 @@
 \usepackage{amsmath} % 用于数学公式
 \usepackage{graphicx} % 用于插入图片
 \usepackage{float}
-\usepackage{lipsum} % 用于生成虚拟文本
 \usepackage{ctex} % 导入 ctex 包以支持中文
 \usepackage{xeCJK}
 \usepackage{titlesec} % 导入 titlesec 包以定制标题样式
 \usepackage{fontspec} % 用于设置中文字体
-\usepackage{amsfonts}
-\usepackage{amsmath} % 提供 \text 和 \tanh 命令
-\usepackage{bm}      % 提供 \bm 命令用于粗体
 
 % 目录设置
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 \usepackage{enumitem}
+
 % 页面设置
 \geometry{margin=1in}
 
@@ -38,36 +35,102 @@
 
 \begin{document}
 
-    \maketitle
+\maketitle
 
 % 添加目录
-    \tableofcontents
+\tableofcontents
 
-    \section{团队成员}
-    211250124 程智镝
+\section{团队成员}
+211250124 程智镝
 
-    211250122 刘辉
+211250122 刘辉
 
-    211250159 陈凌
+211250159 陈凌
 
-    211250158 李忠信
-    \section{文档概况}
-    \subsection{文档负责人员}
+211250158 李忠信
 
-    \section{评估对象}
+\section{文档概况}
+\subsection{文档负责人员}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    姓名   & 学号     & 负责任务               & 成功实例   \\
+    \hline
+    程智镝 & 211250124& 助长，分配任务         &            \\
+    陈凌 & 211250159& 分析可用性问题         & 成功实例   \\
+    刘辉 & 211250122& 分析可用性问题         & 成功实例   \\
+    李忠信 & 211250158& 分析可用性问题         & 成功实例   \\
+    \hline
+\end{tabular}
 
+\section{评估对象}
+20足迹相册地图    
+评估对象组 ：刘永全，李博轩，张涵景，马培森
 
-    \section{评估方法}
-    \subsection{评估流程}
-    \subsection{启发式评估标准}
-    \subsection{严重性等级的标准}
-    \subsection{修复等级的标准}
+网址：\verb|https://git.nju.edu.cn/micer/HCI_frontend.git|
 
-    \section{评估环境}
+此项目描述了 基于地理位置的相册应用，用户可以在应用中上传自己拍摄的照片，并添加地理位置信息和描述。这些照片会在地图上标记出来，用户可以通过地图浏览自己和其他用户上传的照片，以及搜索特定地点或附近地点的照片。该应用旨在让用户通过地图的方式记录和分享自己的足迹，发现世界各地的美景和有趣的地点。同时，应用也会考虑用户体验和数据安全，保证用户可以方便地上传和浏览照片，并保护用户的隐私信息。
+
+功能：
+\begin{enumerate}
+    \item 用户上传照片：用户可以上传自己拍摄的照片到应用中。
+    \item 添加地理位置信息和描述：用户可以为上传的照片添加地理位置信息和描述，以便在地图上进行标记和展示。
+    \item 查看地图上的照片标记：用户可以在地图上浏览自己和其他用户上传的照片标记。
+    \item 搜索特定地点的照片：用户可以通过搜索功能查找特定地点或者附近地点上传的照片。
+    \item 浏览他人上传的照片：用户可以浏览其他用户上传的照片，并了解他们在不同地点的足迹和体验。
+\end{enumerate}
+
+\section{评估方法}
+\subsection{评估流程}
+\begin{enumerate}
+    \item 准备：确定可用性准则与评估记录策略。
+    \item 评估：尝试并建立对系统概况的感知
+    \item 结果分析：回顾每个评估者记录的每个问题并分析。
+    \item 报告汇总：对严重性进行划分。
+\end{enumerate}
+
+\subsection{启发式评估标准}
+我们启发式评估采用的准则为 Nielsen 的 10 条启发式评估准则:
+\begin{enumerate}
+    \item Visibility of system status
+    \item Match between system and the real world
+    \item User control and freedom
+    \item Consistency and standards
+    \item Error prevention
+    \item Recognition rather than recall
+    \item Flexibility and efficiency of use
+    \item Aesthetic and minimalist design
+    \item Help users recognize, diagnose, and recover from errors
+    \item Help and documentation
+\end{enumerate}
+
+\subsection{严重性等级的标准}
+\begin{tabular}{|c|p{10cm}|}
+    \hline
+    等级 & 定义和描述 \\
+    \hline
+    0 & 非关键问题或关于产品的一般性问题。有些细微的不一致会引起犹豫或美学上的小问题。 例如：打字错误(如果是在关键的地方，比如菜单或闪屏上，这可能是一个更高的优先级)；菜单项不使用推荐的字符。 \\
+    1 & 非关键的、有限的问题(没有数据丢失或系统故障)。它不妨碍操作，可以暂时避免。这个问题会给用户带来一定程度的困惑或烦恼。 例如：一个普通的菜单项或工具栏按钮不能做通常期望的事情；明显的性能效率低下。 \\
+    2 & 损害一种或多种产品功能的运行或持续运行，且无法轻易规避或避免的严重状况。该软件不能防止用户犯严重的错误。可用性问题是频繁的、持久的，并且影响许多用户。 例如：缺少关键操作的反馈；没有键盘访问方法的功能。 \\
+    3 & 一种导致客户系统故障或导致客户数据丢失或销毁的紧急情况。这些问题没有解决办法。许多客户需要的关键特性不在系统中。 例如：可用性问题很可能导致一个错误，这会让客户浪费大量的时间或金钱；可用性 \\
+\end{tabular}
+
+\subsection{修复等级的标准}
+\begin{tabular}{|c|p{10cm}|}
+    \hline
+    等级 & 定义和描述 \\
+    \hline
+    0 & 非常容易修复，由一个项目组成员能够完成。 \\
+    1 & 容易修复，涉及到特定界面元素，有明确解决方案。 \\
+    2 & 修复有些困难，涉及界面的很多方面，需要整个项目组成员来完成或者解决方案尚不明确。 \\
+    3 & 难以修复，在下一版本发布之前解决有一定难度，尚未获得明确的解决方案或是解决方案仍存有争议。 \\
+    \hline
+    \end{tabular}
     
-    \section{评估结果}
-    \subsection{可用性问题}
-    \subsection{成功实例}
+\section{评估环境}
+所有评估都在电脑网站浏览器上面运行与测试，使用的网络为南京大学校园网。
+使用的是 edge 浏览器
+\section{评估结果}
+\subsection{可用性问题}
+% 在此处添加可用性问题的具体描述
 
-    
 \end{document}
