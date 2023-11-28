@@ -1,0 +1,31 @@
+train-ticket-frontend/node_modules
+train-ticket-frontend/.DS_Store
+train-ticket-backend/.DS_Store
+
+train-ticket-backend/.gradle
+train-ticket-backend/build/
+train-ticket-backend/!gradle/wrapper/gradle-wrapper.jar
+train-ticket-backend/!**/src/main/**/build/
+train-ticket-backend/!**/src/test/**/build/
+
+### STS ###
+train-ticket-backend/.apt_generated
+train-ticket-backend/.classpath
+train-ticket-backend/.factorypath
+train-ticket-backend/.project
+train-ticket-backend/.settings
+train-ticket-backend/.springBeans
+train-ticket-backend/.sts4-cache
+train-ticket-backend/bin/
+train-ticket-backend/!**/src/main/**/bin/
+train-ticket-backend/!**/src/test/**/bin/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
